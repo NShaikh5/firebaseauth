@@ -1,6 +1,6 @@
 import { Button } from "@material-ui/core";
 
-function Buttonf(){
+function Buttonf(props){
     const {label, onClick} = props;
     return <>
 

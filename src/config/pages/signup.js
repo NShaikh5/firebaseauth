@@ -8,9 +8,7 @@ import { signUpUser } from "../firebase/firebaseMathods";
 function SignUp(){
     const [userObj,setUserObj] = useState({});
     
-    let signUpUser = ()=> {
-        console.log(userObj);
-    };
+    
 
     return (
 
@@ -26,9 +24,10 @@ function SignUp(){
                 <InputF onChange={(e)=>setUserObj({...userObj, password:e.target.value})} label="Password" type="password" required="true" />
              </Box>
              <Box sx={{padding:3}}>
-                 <Buttonf onClick={signUpUser} label="SignUp" />
+                 <Buttonf onClick={()=> signUpUser(userObj)} label="SignUp" />
              </Box>
-        </Box></>
+        </Box>
+        </>
     )
 }
 
